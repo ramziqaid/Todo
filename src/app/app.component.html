@@ -1,3 +1,19 @@
-<div class="app">
-  <router-outlet></router-outlet>
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+  <span class="navbar-brand">My TODO List</span>
+  <div class="navbar-nav">
+    <!-- <a class="nav-item nav-link" href="#">LIST</a>
+      <a class="nav-item nav-link" href="#">ADD</a> -->
+    <a class="nav-item nav-link" routerLink="/counter" routerLinkActive="text-danger">Counter</a>
+    <a class="nav-item nav-link" routerLink="/list" routerLinkActive="text-danger">LIST</a>
+    <a class="nav-item nav-link" routerLink="/post" routerLinkActive="text-danger">post LIST</a>
+    <a class="nav-item nav-link" routerLink="/comment" routerLinkActive="text-danger">post comment</a>
+  </div>
+</nav>
+
+<div class="container">
+  <!-- <app-todo-form></app-todo-form>
+  <app-todo-list></app-todo-list> -->
+  <router-outlet #outlet="outlet"></router-outlet>
+  <app-load-spinner></app-load-spinner>
+
 </div>

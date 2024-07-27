@@ -1,0 +1,10 @@
+<button class="btn btn-primary" type="button" (click)="addPost()">add Posts</button>
+
+<ul>
+    <li *ngFor="let post of posts">
+        {{ post.title }}
+    </li>
+</ul>
+<div *ngIf="error">
+    An error occurred: {{ error }}
+</div>
